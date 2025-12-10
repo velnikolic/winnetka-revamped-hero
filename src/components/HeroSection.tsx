@@ -1,12 +1,6 @@
 import heroImage from "@/assets/hero-classroom.jpg";
 
 const HeroSection = () => {
-  const values = [
-    "Whole Child Approach",
-    "Experiential and Meaningful Learning",
-    "Collaborative Community",
-  ];
-
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
@@ -15,24 +9,27 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-hero-overlay/70 via-hero-overlay/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-hero-overlay/80 via-hero-overlay/30 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-end min-h-screen pb-24 md:pb-32 px-6 md:px-16">
-        <ul className="space-y-3 md:space-y-4">
-          {values.map((value, index) => (
-            <li 
-              key={value}
-              className={`flex items-center gap-4 text-primary-foreground animate-fade-up-delay-${index + 1}`}
-            >
-              <span className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary-foreground flex-shrink-0" />
-              <span className="text-2xl md:text-4xl lg:text-5xl font-display italic text-shadow-hero">
-                {value}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <h1 className="text-primary-foreground animate-fade-up">
+          <span className="block text-3xl md:text-5xl lg:text-6xl font-display">
+            A Tradition of <span className="italic text-accent">Excellence.</span>
+          </span>
+          <span className="block text-3xl md:text-5xl lg:text-6xl font-display mt-2">
+            A Community of <span className="italic text-accent">Care.</span>
+          </span>
+        </h1>
+      </div>
+
+      {/* Discover More - Side Text */}
+      <div className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4">
+        <span className="text-primary-foreground/80 text-xs tracking-[0.3em] uppercase rotate-90 origin-center whitespace-nowrap">
+          Discover More
+        </span>
+        <div className="w-px h-16 bg-accent mt-8" />
       </div>
     </section>
   );
