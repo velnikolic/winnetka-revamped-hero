@@ -58,11 +58,14 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="relative -mt-24 md:-mt-32 z-20 pb-16 md:pb-24">
       <div className="container mx-auto px-6 md:px-12">
         {/* Stats Carousel */}
-        <div className="relative">
-          <div className="flex items-center justify-between mb-8">
+        <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl md:text-2xl font-display font-semibold text-foreground">
+              By the Numbers
+            </h2>
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -109,16 +112,6 @@ const StatsSection = () => {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Mission Statement */}
-        <div className="mt-16 md:mt-24 max-w-4xl">
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-body">
-            For over five decades, Avoca School District 37 has been dedicated to nurturing 
-            the whole child through experiential and meaningful learning. Our collaborative 
-            community fosters academic excellence, creativity, and character development, 
-            preparing students to become thoughtful leaders in an ever-changing world.
-          </p>
         </div>
       </div>
     </section>
