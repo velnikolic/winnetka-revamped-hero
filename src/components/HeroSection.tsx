@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-classroom.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] w-full overflow-hidden">
+    <section className="relative min-h-[95vh] w-full overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-end min-h-[85vh] pb-32 md:pb-40 px-6 md:px-16">
+      <div className="relative z-10 flex flex-col justify-end min-h-[95vh] pb-40 md:pb-48 px-6 md:px-16">
         <h1 className="text-primary-foreground animate-fade-up">
           <span className="block text-3xl md:text-5xl lg:text-6xl font-display">
             A Tradition of <span className="italic text-accent">Excellence.</span>
