@@ -12,32 +12,32 @@ const stats: StatItem[] = [
   {
     stat: "750+",
     label: "Students Enrolled",
-    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop"
   },
   {
     stat: "15:1",
     label: "Student-Teacher Ratio",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop"
   },
   {
     stat: "100%",
     label: "College Acceptance Rate",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop"
   },
   {
     stat: "25+",
     label: "Extracurricular Activities",
-    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&h=400&fit=crop"
   },
   {
     stat: "50+",
     label: "Years of Excellence",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     stat: "98%",
     label: "Parent Satisfaction",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   }
 ];
 
@@ -58,42 +58,39 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="relative -mt-24 md:-mt-32 z-20 pb-16 md:pb-24">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Stats Carousel */}
-        <div className="relative bg-background/95 backdrop-blur-sm shadow-xl p-6 md:p-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl md:text-2xl font-display font-semibold text-foreground">
-              By the Numbers
-            </h2>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevSlide}
-                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={nextSlide}
-                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+        <div className="relative">
+          {/* Arrow Left */}
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-background border-primary/30 hover:bg-primary hover:text-primary-foreground w-12 h-12"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
 
-          <div className="overflow-hidden">
+          {/* Arrow Right */}
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-background border-primary/30 hover:bg-primary hover:text-primary-foreground w-12 h-12"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
+
+          {/* Carousel */}
+          <div className="overflow-hidden mx-4 md:mx-8">
             <div 
               className="flex transition-transform duration-500 ease-out gap-4"
               style={{ transform: `translateX(-${currentIndex * (100 / visibleStats)}%)` }}
             >
               {stats.map((item, index) => (
-                <div 
+                <a 
                   key={index}
+                  href="#"
                   className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 group cursor-pointer"
                 >
                   <div className="relative overflow-hidden aspect-[4/3]">
@@ -108,7 +105,7 @@ const StatsSection = () => {
                       <p className="text-sm opacity-90">{item.label}</p>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
