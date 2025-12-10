@@ -58,17 +58,17 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-8 md:py-12 bg-primary">
+      <div className="container mx-auto px-6 md:px-16">
         <div className="relative">
           {/* Arrow Left */}
           <Button
             variant="outline"
             size="icon"
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-background border-primary/30 hover:bg-primary hover:text-primary-foreground w-12 h-12"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-8 z-10 bg-accent text-accent-foreground border-none hover:bg-accent/80 w-14 h-14 shadow-xl"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-8 w-8" />
           </Button>
 
           {/* Arrow Right */}
@@ -76,15 +76,15 @@ const StatsSection = () => {
             variant="outline"
             size="icon"
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-background border-primary/30 hover:bg-primary hover:text-primary-foreground w-12 h-12"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-8 z-10 bg-accent text-accent-foreground border-none hover:bg-accent/80 w-14 h-14 shadow-xl"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-8 w-8" />
           </Button>
 
           {/* Carousel */}
-          <div className="overflow-hidden mx-4 md:mx-8">
+          <div className="overflow-hidden mx-8 md:mx-12">
             <div 
-              className="flex transition-transform duration-500 ease-out gap-4"
+              className="flex transition-transform duration-500 ease-out gap-4 md:gap-6"
               style={{ transform: `translateX(-${currentIndex * (100 / visibleStats)}%)` }}
             >
               {stats.map((item, index) => (
@@ -93,16 +93,16 @@ const StatsSection = () => {
                   href="#"
                   className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 group cursor-pointer"
                 >
-                  <div className="relative overflow-hidden aspect-[4/3]">
+                  <div className="relative overflow-hidden aspect-[3/2]">
                     <img 
                       src={item.image} 
                       alt={item.label}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
-                      <p className="text-3xl md:text-4xl font-display font-bold">{item.stat}</p>
-                      <p className="text-sm opacity-90">{item.label}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
+                      <p className="text-4xl md:text-5xl font-display font-bold">{item.stat}</p>
+                      <p className="text-sm md:text-base opacity-90 mt-1">{item.label}</p>
                     </div>
                   </div>
                 </a>
