@@ -69,42 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
-  // Calendar Carousel
-  // ============================================
-  const calendarCarousel = document.getElementById('calendar-carousel');
-  const calendarPrev = document.getElementById('calendar-prev');
-  const calendarNext = document.getElementById('calendar-next');
-  let calendarIndex = 0;
-  const calendarTotal = calendarCarousel ? calendarCarousel.children.length : 6;
-
-  function getCalendarVisible() {
-    return window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
-  }
-
-  function updateCalendarCarousel() {
-    if (!calendarCarousel || !calendarCarousel.children.length) return;
-    const cardWidth = calendarCarousel.children[0].offsetWidth;
-    const gap = 16;
-    calendarCarousel.style.transform = `translateX(-${calendarIndex * (cardWidth + gap)}px)`;
-  }
-
-  if (calendarPrev) {
-    calendarPrev.addEventListener('click', function() {
-      const visible = getCalendarVisible();
-      calendarIndex = calendarIndex === 0 ? Math.max(0, calendarTotal - visible) : calendarIndex - 1;
-      updateCalendarCarousel();
-    });
-  }
-
-  if (calendarNext) {
-    calendarNext.addEventListener('click', function() {
-      const visible = getCalendarVisible();
-      calendarIndex = calendarIndex >= calendarTotal - visible ? 0 : calendarIndex + 1;
-      updateCalendarCarousel();
-    });
-  }
-
-  // ============================================
   // Student Stories Carousel
   // ============================================
   const stories = [
