@@ -61,7 +61,7 @@ const StatsSection = () => {
     <section className="relative -mt-24 md:-mt-32 z-20 pb-16 md:pb-24">
       <div className="container mx-auto px-6 md:px-12">
         {/* Stats Carousel */}
-        <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="relative bg-background/95 backdrop-blur-sm shadow-xl p-6 md:p-8">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl md:text-2xl font-display font-semibold text-foreground">
               By the Numbers
@@ -71,7 +71,7 @@ const StatsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -79,7 +79,7 @@ const StatsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
@@ -96,7 +96,7 @@ const StatsSection = () => {
                   key={index}
                   className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 group cursor-pointer"
                 >
-                  <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                  <div className="relative overflow-hidden aspect-[4/3]">
                     <img 
                       src={item.image} 
                       alt={item.label}

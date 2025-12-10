@@ -55,7 +55,7 @@ const QuickLinksSection = () => {
             <a 
               key={index}
               href={link.href}
-              className="group relative overflow-hidden rounded-lg aspect-[4/3] block"
+              className="group relative overflow-hidden aspect-[4/3] block"
             >
               <img 
                 src={link.image} 

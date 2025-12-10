@@ -95,7 +95,7 @@ const CalendarSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -103,7 +103,7 @@ const CalendarSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
@@ -121,10 +121,10 @@ const CalendarSection = () => {
                 key={index}
                 className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4"
               >
-                <div className="bg-card rounded-xl p-6 h-full border border-border/50 hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <div className="bg-card p-6 h-full border border-border/50 hover:shadow-lg hover:border-primary/30 transition-all duration-300">
                   <div className="flex gap-4">
                     {/* Date Badge */}
-                    <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-lg flex flex-col items-center justify-center text-primary-foreground">
+                    <div className="flex-shrink-0 w-16 h-16 bg-primary flex flex-col items-center justify-center text-primary-foreground">
                       <span className="text-xs uppercase font-medium">{event.date.month}</span>
                       <span className="text-2xl font-display font-bold">{event.date.day}</span>
                     </div>

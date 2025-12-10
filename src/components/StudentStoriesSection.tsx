@@ -63,7 +63,7 @@ const StudentStoriesSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevStory}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -71,7 +71,7 @@ const StudentStoriesSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextStory}
-                className="rounded-full border-primary/30 hover:bg-primary hover:text-primary-foreground"
+                className="border-primary/30 hover:bg-primary hover:text-primary-foreground"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
@@ -79,7 +79,7 @@ const StudentStoriesSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xl">
+        <div className="grid lg:grid-cols-2 gap-0 overflow-hidden shadow-xl">
           {/* Text Side */}
           <div className="bg-primary p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <div className="space-y-6">
@@ -102,7 +102,7 @@ const StudentStoriesSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
+                    className={`w-3 h-3 transition-all ${
                       index === currentIndex 
                         ? "bg-accent w-8" 
                         : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
