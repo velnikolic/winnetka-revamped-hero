@@ -5,6 +5,7 @@ import AboutVideoSection from "@/components/AboutVideoSection";
 import QuickLinksSection from "@/components/QuickLinksSection";
 import CalendarSection from "@/components/CalendarSection";
 import StudentStoriesSection from "@/components/StudentStoriesSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <QuickLinksSection />
       <CalendarSection />
       <StudentStoriesSection />
+      <Footer />
     </main>
   );
 };

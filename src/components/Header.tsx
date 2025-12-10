@@ -17,7 +17,7 @@ const Header = () => {
       {/* Menu Button */}
       <Button 
         variant="outline" 
-        className="bg-primary/90 backdrop-blur-sm border-none text-primary-foreground hover:bg-primary shadow-lg px-5 py-2 h-auto rounded-full"
+        className="bg-primary/90 backdrop-blur-sm border-none text-primary-foreground hover:bg-primary shadow-lg px-5 py-2 h-auto"
       >
         <span className="font-semibold mr-2">MENU</span>
         <Menu className="h-5 w-5" />
