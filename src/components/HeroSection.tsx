@@ -19,17 +19,8 @@ const HeroSection = () => {
 
       {/* Content at bottom */}
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-8">
-        <h1 className="text-primary-foreground animate-fade-up">
-          <span className="block text-3xl md:text-5xl lg:text-6xl font-display">
-            A Tradition of <span className="italic text-accent">Excellence.</span>
-          </span>
-          <span className="block text-3xl md:text-5xl lg:text-6xl font-display mt-2">
-            A Community of <span className="italic text-accent">Care.</span>
-          </span>
-        </h1>
-
         {/* Schools List */}
-        <div className="mt-6 flex flex-wrap gap-4 animate-fade-up-delay-1">
+        <div className="flex flex-wrap gap-4 animate-fade-up">
           {schools.map((school, index) => (
             <a
               key={index}
@@ -42,12 +33,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Discover More - Bottom Right */}
-      <div className="absolute right-6 md:right-12 bottom-8 hidden lg:flex items-center gap-4">
-        <div className="w-16 h-px bg-accent" />
-        <span className="text-primary-foreground/80 text-xs tracking-[0.3em] uppercase whitespace-nowrap">
+      {/* Discover More - Vertical on right side at bottom */}
+      <div className="absolute right-6 md:right-12 bottom-12 hidden lg:flex flex-col items-center gap-4">
+        <span className="text-primary-foreground/80 text-xs tracking-[0.3em] uppercase rotate-90 origin-center whitespace-nowrap">
           Discover More
         </span>
+        <div className="w-px h-16 bg-accent mt-8" />
       </div>
     </section>
   );
