@@ -33,14 +33,14 @@ const AboutVideoSection = () => {
             </div>
 
             {/* Video Placeholder */}
-            <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
+            <div className="relative aspect-video overflow-hidden bg-muted">
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop"
                 alt="Students learning"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-primary/30 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-primary-foreground/90 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg">
+                <div className="w-20 h-20 bg-primary-foreground/90 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg">
                   <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-primary border-b-[12px] border-b-transparent ml-1" />
                 </div>
               </div>
@@ -52,9 +52,9 @@ const AboutVideoSection = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="group p-6 bg-card rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="group p-6 bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-foreground">
