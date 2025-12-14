@@ -3269,3 +3269,315 @@ button {
 body.has-sidemenu .footer {
   margin-top: 0;
 }
+
+/* ============================================
+   Staff Directory Page
+   ============================================ */
+.staff-directory-section {
+  padding: 4rem 0;
+}
+
+.staff-filters {
+  margin-bottom: 3rem;
+}
+
+.staff-search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.staff-search svg {
+  color: var(--muted-foreground);
+  flex-shrink: 0;
+}
+
+.staff-search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--foreground);
+  outline: none;
+}
+
+.staff-search input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.staff-filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.staff-category {
+  margin-bottom: 3rem;
+}
+
+.staff-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.staff-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.staff-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.staff-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.staff-image {
+  flex-shrink: 0;
+}
+
+.staff-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.staff-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.staff-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.staff-title {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.125rem;
+}
+
+.staff-department {
+  color: var(--muted-foreground);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.staff-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.staff-contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  transition: color 0.2s;
+}
+
+.staff-contact a:hover {
+  color: var(--primary);
+}
+
+.staff-contact svg {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Clubs Page
+   ============================================ */
+.clubs-intro {
+  padding: 3rem 0;
+  background: var(--muted);
+}
+
+.clubs-intro-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.clubs-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.clubs-intro p {
+  color: var(--muted-foreground);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.clubs-section {
+  padding: 4rem 0;
+}
+
+.clubs-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.clubs-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .clubs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.club-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.club-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.club-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.club-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.club-card:hover .club-image img {
+  transform: scale(1.05);
+}
+
+.club-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.club-badge.badge-arts {
+  background: hsl(280, 60%, 45%);
+}
+
+.club-badge.badge-sports {
+  background: hsl(145, 60%, 35%);
+}
+
+.club-badge.badge-service {
+  background: hsl(200, 70%, 40%);
+}
+
+.club-badge.badge-stem {
+  background: hsl(35, 85%, 50%);
+  color: hsl(0, 0%, 10%);
+}
+
+.club-content {
+  padding: 1.5rem;
+}
+
+.club-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.club-content p {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.club-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.club-schedule {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.club-grades {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.club-advisor {
+  font-size: 0.85rem;
+  color: var(--foreground);
+}
+
+.club-advisor strong {
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.clubs-faq {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.clubs-faq h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
