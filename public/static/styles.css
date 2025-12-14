@@ -293,6 +293,8 @@ button {
 .menu-logo {
   width: 4rem;
   height: 4rem;
+  background: transparent;
+  padding: 0;
 }
 
 .menu-logo-wrap h2 {
@@ -306,13 +308,7 @@ button {
 }
 
 .close-btn {
-  color: var(--primary-foreground);
-  padding: 0.5rem;
-  transition: background 0.2s;
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  display: none;
 }
 
 .menu-search {
