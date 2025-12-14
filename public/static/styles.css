@@ -201,16 +201,12 @@ button {
   color: var(--primary-foreground);
   overflow-y: auto;
   padding-top: env(safe-area-inset-top);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-overlay.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  clip-path: inset(0 0 0 0);
 }
 
 .menu-header {
@@ -1993,17 +1989,19 @@ button {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .faq-item.open .faq-answer {
   max-height: 500px;
-  padding: 0 1.25rem 1.25rem;
+  padding: 1rem 1.5rem 1.5rem;
 }
 
 .faq-answer p {
   margin-bottom: 0;
+  line-height: 1.7;
+  color: var(--muted-foreground);
 }
 
 /* ============================================
