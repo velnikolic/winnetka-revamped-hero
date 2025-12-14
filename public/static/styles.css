@@ -269,13 +269,9 @@ button {
 .menu-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  position: sticky;
-  top: 0;
-  background: var(--primary);
-  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -293,8 +289,6 @@ button {
 .menu-logo {
   width: 4rem;
   height: 4rem;
-  background: transparent;
-  padding: 0;
 }
 
 .menu-logo-wrap h2 {
@@ -413,6 +407,35 @@ button {
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-section h3::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu-section h3::after {
+    display: block;
+  }
+  
+  .menu-section.open h3::after {
+    content: '−';
+  }
+  
+  .menu-section ul {
+    display: none;
+  }
+  
+  .menu-section.open ul {
+    display: flex;
+  }
 }
 
 .menu-section ul {

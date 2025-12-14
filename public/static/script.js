@@ -64,6 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
+  // Mobile Menu Section Toggles
+  // ============================================
+  const menuSections = document.querySelectorAll('.menu-section');
+  menuSections.forEach(function(section) {
+    const heading = section.querySelector('h3');
+    if (heading) {
+      heading.addEventListener('click', function() {
+        if (window.innerWidth < 768) {
+          section.classList.toggle('open');
+        }
+      });
+    }
+  });
+
+  // ============================================
   // Stats Carousel
   // ============================================
   const statsCarousel = document.getElementById('stats-carousel');
