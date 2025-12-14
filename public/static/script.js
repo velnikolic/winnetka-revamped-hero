@@ -50,23 +50,32 @@ document.addEventListener('DOMContentLoaded', function() {
   const statsNext = document.getElementById('stats-next');
   let statsIndex = 0;
   const statsTotal = 6;
-  const statsVisible = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+  let statsVisible = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+  let updateStatsCarousel = null;
 
-  function updateStatsCarousel() {
-    const cardWidth = statsCarousel.children[0].offsetWidth;
-    const gap = window.innerWidth >= 768 ? 24 : 16;
-    statsCarousel.style.transform = `translateX(-${statsIndex * (cardWidth + gap)}px)`;
+  if (statsCarousel && statsPrev && statsNext) {
+    updateStatsCarousel = function() {
+      if (!statsCarousel || !statsCarousel.children.length) return;
+      const cardWidth = statsCarousel.children[0].offsetWidth;
+      const gap = window.innerWidth >= 768 ? 24 : 16;
+      statsCarousel.style.transform = `translateX(-${statsIndex * (cardWidth + gap)}px)`;
+    };
+
+    statsPrev.addEventListener('click', function() {
+      statsVisible = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+      statsIndex = statsIndex === 0 ? statsTotal - statsVisible : statsIndex - 1;
+      updateStatsCarousel();
+    });
+
+    statsNext.addEventListener('click', function() {
+      statsVisible = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1;
+      statsIndex = statsIndex >= statsTotal - statsVisible ? 0 : statsIndex + 1;
+      updateStatsCarousel();
+    });
+
+    // Initial layout
+    updateStatsCarousel();
   }
-
-  statsPrev.addEventListener('click', function() {
-    statsIndex = statsIndex === 0 ? statsTotal - statsVisible : statsIndex - 1;
-    updateStatsCarousel();
-  });
-
-  statsNext.addEventListener('click', function() {
-    statsIndex = statsIndex >= statsTotal - statsVisible ? 0 : statsIndex + 1;
-    updateStatsCarousel();
-  });
 
   // ============================================
   // Student Stories Carousel
@@ -101,35 +110,40 @@ document.addEventListener('DOMContentLoaded', function() {
   const storyPrev = document.getElementById('story-prev');
   const storyNext = document.getElementById('story-next');
 
-  function updateStory() {
-    const story = stories[storyIndex];
-    storyName.textContent = story.name;
-    storyGrade.textContent = story.grade;
-    storyQuote.textContent = `"${story.quote}"`;
-    storyImg.src = story.image;
-    storyImg.alt = story.name;
+  if (storyName && storyGrade && storyQuote && storyImg && storyDots.length && storyPrev && storyNext) {
+    function updateStory() {
+      const story = stories[storyIndex];
+      storyName.textContent = story.name;
+      storyGrade.textContent = story.grade;
+      storyQuote.textContent = `"${story.quote}"`;
+      storyImg.src = story.image;
+      storyImg.alt = story.name;
 
-    storyDots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === storyIndex);
-    });
-  }
+      storyDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === storyIndex);
+      });
+    }
 
-  storyPrev.addEventListener('click', function() {
-    storyIndex = (storyIndex - 1 + stories.length) % stories.length;
-    updateStory();
-  });
-
-  storyNext.addEventListener('click', function() {
-    storyIndex = (storyIndex + 1) % stories.length;
-    updateStory();
-  });
-
-  storyDots.forEach((dot, index) => {
-    dot.addEventListener('click', function() {
-      storyIndex = index;
+    storyPrev.addEventListener('click', function() {
+      storyIndex = (storyIndex - 1 + stories.length) % stories.length;
       updateStory();
     });
-  });
+
+    storyNext.addEventListener('click', function() {
+      storyIndex = (storyIndex + 1) % stories.length;
+      updateStory();
+    });
+
+    storyDots.forEach((dot, index) => {
+      dot.addEventListener('click', function() {
+        storyIndex = index;
+        updateStory();
+      });
+    });
+
+    // Initialize with first story
+    updateStory();
+  }
 
   // ============================================
   // Handle Window Resize
