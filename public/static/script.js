@@ -146,18 +146,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // FAQ Accordion
   // ============================================
   function initFaqAccordions() {
-    document.querySelectorAll('.faq-accordion, .faq-list').forEach(function(accordion) {
+    const faqContainers = document.querySelectorAll('.faq-accordion, .faq-list');
+    faqContainers.forEach(function(accordion) {
       const items = accordion.querySelectorAll('.faq-item');
       items.forEach(function(item) {
         const question = item.querySelector('.faq-question');
         if (question) {
-          question.addEventListener('click', function(e) {
+          // Remove existing listeners by cloning
+          const newQuestion = question.cloneNode(true);
+          question.parentNode.replaceChild(newQuestion, question);
+          
+          newQuestion.style.cursor = 'pointer';
+          newQuestion.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             const wasOpen = item.classList.contains('open');
             // Close all items in this accordion
             items.forEach(function(i) { i.classList.remove('open'); });
             // Open clicked item if it wasn't open
-            if (!wasOpen) item.classList.add('open');
+            if (!wasOpen) {
+              item.classList.add('open');
+            }
           });
         }
       });

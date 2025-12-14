@@ -200,12 +200,17 @@ button {
   background: var(--primary);
   color: var(--primary-foreground);
   overflow-y: auto;
-  display: none;
   padding-top: env(safe-area-inset-top);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
 .menu-overlay.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .menu-header {
@@ -235,8 +240,6 @@ button {
 .menu-logo {
   width: 4rem;
   height: 4rem;
-  background: var(--primary-foreground);
-  padding: 0.25rem;
 }
 
 .menu-logo-wrap h2 {
@@ -1968,7 +1971,10 @@ button {
   text-align: left;
   font-weight: 600;
   color: var(--foreground);
+  cursor: pointer;
   transition: background 0.2s;
+  background: transparent;
+  border: none;
 }
 
 .faq-question:hover {
@@ -1985,12 +1991,15 @@ button {
 }
 
 .faq-answer {
-  display: none;
-  padding: 0 1.25rem 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .faq-item.open .faq-answer {
-  display: block;
+  max-height: 500px;
+  padding: 0 1.25rem 1.25rem;
 }
 
 .faq-answer p {
@@ -2985,7 +2994,7 @@ button {
   height: 2rem;
   background: var(--primary);
   color: var(--primary-foreground);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 10;
@@ -2999,7 +3008,7 @@ button {
 
 @media (max-width: 1023px) {
   .sidemenu-toggle {
-    display: none;
+    display: flex;
   }
 }
 
