@@ -174,39 +174,35 @@ button {
   color: var(--primary-foreground);
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 101;
 }
 
-.menu-btn.menu-open {
-  background: transparent;
-  box-shadow: none;
-}
-
-.menu-btn.menu-open span {
+.menu-btn .menu-text-open,
+.menu-btn .menu-icon-close {
   display: none;
 }
 
-.menu-btn.menu-open svg line {
-  stroke: var(--primary-foreground);
+.menu-btn.menu-open .menu-text {
+  display: none;
 }
 
-.menu-btn.menu-open svg {
-  transform: rotate(45deg);
+.menu-btn.menu-open .menu-text-open {
+  display: inline;
 }
 
-.menu-btn.menu-open svg line:nth-child(1) {
-  transform: translateY(6px);
+.menu-btn.menu-open .menu-icon {
+  display: none;
 }
 
-.menu-btn.menu-open svg line:nth-child(2) {
-  opacity: 0;
+.menu-btn.menu-open .menu-icon-close {
+  display: block;
 }
 
-.menu-btn.menu-open svg line:nth-child(3) {
-  transform: translateY(-6px) rotate(90deg);
-  transform-origin: center;
+.menu-btn.menu-open {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
 }
 
 .header.scrolled .menu-btn {
@@ -215,7 +211,7 @@ button {
 }
 
 .header.scrolled .menu-btn.menu-open {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
   color: var(--primary-foreground);
 }
 
@@ -224,11 +220,15 @@ button {
 }
 
 .menu-btn.menu-open:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .header.scrolled .menu-btn:hover {
   background: hsl(45, 85%, 45%);
+}
+
+.header.scrolled .menu-btn.menu-open:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* ============================================
@@ -242,12 +242,14 @@ button {
   color: var(--primary-foreground);
   overflow-y: auto;
   padding-top: env(safe-area-inset-top);
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .menu-overlay.open {
-  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu-header {
