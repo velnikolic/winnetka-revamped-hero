@@ -199,34 +199,29 @@ button {
 }
 
 .menu-btn.menu-open .menu-text {
-  display: none;
-}
-
-.menu-btn.menu-open .menu-text-open {
   display: inline;
 }
 
-.menu-btn.menu-open .menu-icon {
+.menu-btn.menu-open .menu-text-open {
   display: none;
 }
 
+.menu-btn.menu-open .menu-icon {
+  display: inline;
+}
+
 .menu-btn.menu-open .menu-icon-close {
-  display: block;
+  display: none;
 }
 
 .menu-btn.menu-open {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: none;
-}
-
-.header.scrolled .menu-btn {
-  background: var(--accent);
-  color: var(--accent-foreground);
+  background: rgba(128, 39, 39, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header.scrolled .menu-btn.menu-open {
-  background: rgba(255, 255, 255, 0.15);
-  color: var(--primary-foreground);
+  background: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .menu-btn:hover {
@@ -234,7 +229,7 @@ button {
 }
 
 .menu-btn.menu-open:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--primary);
 }
 
 .header.scrolled .menu-btn:hover {
@@ -242,7 +237,7 @@ button {
 }
 
 .header.scrolled .menu-btn.menu-open:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: hsl(45, 85%, 45%);
 }
 
 /* ============================================
@@ -307,6 +302,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
 }
 
 .menu-search {
