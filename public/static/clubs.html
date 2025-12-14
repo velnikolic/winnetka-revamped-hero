@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clubs and Activities - Explore extracurricular programs at Avoca School District 37 in Wilmette, Illinois.">
+  <title>Clubs & Activities | Avoca School District 37</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-inner" id="header">
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="../avoca-logo.png" alt="Avoca School District 37" class="logo-img">
+      </a>
+      <span class="header-title" id="header-title">Avoca School District 37</span>
+    </div>
+    <button class="menu-btn" id="menu-btn">
+      <span>MENU</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Secondary Navigation -->
+  <nav class="secondary-nav">
+    <div class="container">
+      <ul class="secondary-nav-list">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="staff-directory.html">Staff Directory</a></li>
+        <li><a href="clubs.html" class="active">Clubs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <div class="menu-header">
+      <div class="menu-logo-wrap">
+        <img src="../avoca-logo.png" alt="Avoca School District 37" class="menu-logo">
+        <div>
+          <h2>Avoca School District 37</h2>
+          <p>Wilmette, Illinois</p>
+        </div>
+      </div>
+      <button class="close-btn" id="close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu-search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.3-4.3"></path>
+      </svg>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="menu-quick-links">
+      <a href="#">Parent Portal</a>
+      <a href="staff-directory.html">Staff Directory</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="menu-sections">
+      <div class="menu-section">
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">Our District</a></li>
+          <li><a href="about.html#mission">Mission & Vision</a></li>
+          <li><a href="about.html#leadership">Leadership</a></li>
+          <li><a href="about.html#board">Board of Education</a></li>
+          <li><a href="#">Employment</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Schools</h3>
+        <ul>
+          <li><a href="#">Avoca West</a></li>
+          <li><a href="#">Marie Murphy</a></li>
+          <li><a href="#">District Office</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="#">Curriculum</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Special Education</a></li>
+          <li><a href="#">Gifted & Talented</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Parents & Students</h3>
+        <ul>
+          <li><a href="#">Parent Portal</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="#">Lunch Menu</a></li>
+          <li><a href="#">Transportation</a></li>
+          <li><a href="#">Health Services</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="news.html">News & Events</a></li>
+          <li><a href="#">PTO</a></li>
+          <li><a href="#">Foundation</a></li>
+          <li><a href="#">Volunteer</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="staff-directory.html">Staff Directory</a></li>
+          <li><a href="clubs.html">Clubs & Activities</a></li>
+          <li><a href="sidemenu-template.html">Side Menu Template</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1920&h=600&fit=crop');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Clubs & Activities</span>
+        </nav>
+        <h1>Clubs & <span class="italic">Activities</span></h1>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="clubs-intro">
+      <div class="container">
+        <div class="clubs-intro-content">
+          <h2>Explore Your Interests</h2>
+          <p>At Avoca School District 37, we believe that learning extends beyond the classroom. Our diverse range of clubs and activities provides students with opportunities to explore their passions, develop new skills, and build lasting friendships.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Club Categories -->
+    <section class="clubs-section">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="clubs-filter">
+          <button class="filter-btn active" data-filter="all">All Activities</button>
+          <button class="filter-btn" data-filter="academic">Academic</button>
+          <button class="filter-btn" data-filter="arts">Arts & Music</button>
+          <button class="filter-btn" data-filter="sports">Sports</button>
+          <button class="filter-btn" data-filter="service">Service</button>
+          <button class="filter-btn" data-filter="stem">STEM</button>
+        </div>
+
+        <!-- Clubs Grid -->
+        <div class="clubs-grid">
+          <!-- Academic Clubs -->
+          <div class="club-card" data-category="academic">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop" alt="Math Club">
+              <span class="club-badge">Academic</span>
+            </div>
+            <div class="club-content">
+              <h3>Math Club</h3>
+              <p>Explore advanced mathematical concepts, solve challenging problems, and prepare for competitions.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Tuesdays, 3:15-4:15 PM
+                </span>
+                <span class="club-grades">Grades 6-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mr. Thomas Anderson
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="academic">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop" alt="Debate Team">
+              <span class="club-badge">Academic</span>
+            </div>
+            <div class="club-content">
+              <h3>Debate Team</h3>
+              <p>Develop public speaking skills, critical thinking, and argumentation through competitive debate.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Wednesdays, 3:15-4:30 PM
+                </span>
+                <span class="club-grades">Grades 7-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Ms. Olivia Brown
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="academic">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Book Club">
+              <span class="club-badge">Academic</span>
+            </div>
+            <div class="club-content">
+              <h3>Book Club</h3>
+              <p>Discover new books, discuss literature, and connect with fellow readers in a supportive environment.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Thursdays, 3:15-4:00 PM
+                </span>
+                <span class="club-grades">Grades 3-5</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mrs. Amanda White
+              </div>
+            </div>
+          </div>
+
+          <!-- Arts & Music -->
+          <div class="club-card" data-category="arts">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=300&fit=crop" alt="Orchestra">
+              <span class="club-badge badge-arts">Arts & Music</span>
+            </div>
+            <div class="club-content">
+              <h3>Orchestra</h3>
+              <p>Learn to play string instruments and perform in concerts throughout the year.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Mon & Wed, 7:30-8:15 AM
+                </span>
+                <span class="club-grades">Grades 4-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Ms. Linda Taylor
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="arts">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=300&fit=crop" alt="Art Club">
+              <span class="club-badge badge-arts">Arts & Music</span>
+            </div>
+            <div class="club-content">
+              <h3>Art Club</h3>
+              <p>Express your creativity through various art mediums including painting, sculpture, and digital art.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Fridays, 3:15-4:30 PM
+                </span>
+                <span class="club-grades">Grades K-5</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Ms. Rachel Green
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="arts">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=400&h=300&fit=crop" alt="Drama Club">
+              <span class="club-badge badge-arts">Arts & Music</span>
+            </div>
+            <div class="club-content">
+              <h3>Drama Club</h3>
+              <p>Explore acting, stagecraft, and theatrical production through workshops and performances.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Tue & Thu, 3:15-4:45 PM
+                </span>
+                <span class="club-grades">Grades 5-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mrs. Susan Miller
+              </div>
+            </div>
+          </div>
+
+          <!-- Sports -->
+          <div class="club-card" data-category="sports">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop" alt="Basketball">
+              <span class="club-badge badge-sports">Sports</span>
+            </div>
+            <div class="club-content">
+              <h3>Basketball</h3>
+              <p>Develop basketball skills, teamwork, and sportsmanship through practice and competitive games.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Mon-Thu, 3:15-4:30 PM
+                </span>
+                <span class="club-grades">Grades 6-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Coach:</strong> Mr. James Martinez
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="sports">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop" alt="Track & Field">
+              <span class="club-badge badge-sports">Sports</span>
+            </div>
+            <div class="club-content">
+              <h3>Track & Field</h3>
+              <p>Train in running, jumping, and throwing events while building endurance and athletic skills.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Spring Season
+                </span>
+                <span class="club-grades">Grades 5-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Coach:</strong> Mr. James Martinez
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="sports">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Soccer">
+              <span class="club-badge badge-sports">Sports</span>
+            </div>
+            <div class="club-content">
+              <h3>Soccer</h3>
+              <p>Learn soccer fundamentals, game strategy, and compete in interscholastic matches.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Fall Season
+                </span>
+                <span class="club-grades">Grades 5-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Coach:</strong> Mr. David Kim
+              </div>
+            </div>
+          </div>
+
+          <!-- Service -->
+          <div class="club-card" data-category="service">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop" alt="Student Council">
+              <span class="club-badge badge-service">Service</span>
+            </div>
+            <div class="club-content">
+              <h3>Student Council</h3>
+              <p>Represent your classmates, organize school events, and develop leadership skills.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Mondays, 3:15-4:00 PM
+                </span>
+                <span class="club-grades">Grades 6-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mrs. Emily Davis
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="service">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&h=300&fit=crop" alt="Community Service Club">
+              <span class="club-badge badge-service">Service</span>
+            </div>
+            <div class="club-content">
+              <h3>Community Service Club</h3>
+              <p>Make a difference through volunteer projects and community outreach initiatives.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Bi-weekly Fridays
+                </span>
+                <span class="club-grades">Grades 5-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mr. Richard Hall
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="service">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop" alt="Peer Tutoring">
+              <span class="club-badge badge-service">Service</span>
+            </div>
+            <div class="club-content">
+              <h3>Peer Tutoring</h3>
+              <p>Help fellow students succeed by sharing your knowledge and providing academic support.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  By Appointment
+                </span>
+                <span class="club-grades">Grades 7-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Dr. Sarah Chen
+              </div>
+            </div>
+          </div>
+
+          <!-- STEM -->
+          <div class="club-card" data-category="stem">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" alt="Robotics Club">
+              <span class="club-badge badge-stem">STEM</span>
+            </div>
+            <div class="club-content">
+              <h3>Robotics Club</h3>
+              <p>Design, build, and program robots while learning engineering and programming fundamentals.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Wed & Fri, 3:15-4:45 PM
+                </span>
+                <span class="club-grades">Grades 5-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mr. Mark Stevens
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="stem">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop" alt="Science Olympiad">
+              <span class="club-badge badge-stem">STEM</span>
+            </div>
+            <div class="club-content">
+              <h3>Science Olympiad</h3>
+              <p>Compete in science challenges covering biology, chemistry, physics, and earth science.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Thursdays, 3:15-4:30 PM
+                </span>
+                <span class="club-grades">Grades 6-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mr. William Park
+              </div>
+            </div>
+          </div>
+
+          <div class="club-card" data-category="stem">
+            <div class="club-image">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=300&fit=crop" alt="Coding Club">
+              <span class="club-badge badge-stem">STEM</span>
+            </div>
+            <div class="club-content">
+              <h3>Coding Club</h3>
+              <p>Learn programming languages, create games and apps, and explore computer science concepts.</p>
+              <div class="club-meta">
+                <span class="club-schedule">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Tuesdays, 3:15-4:15 PM
+                </span>
+                <span class="club-grades">Grades 3-8</span>
+              </div>
+              <div class="club-advisor">
+                <strong>Advisor:</strong> Mr. Mark Stevens
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="clubs-faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How do I sign up for a club?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Students can sign up for clubs at the beginning of each semester during Club Fair, or by contacting the club advisor directly. Permission forms are available in the main office and must be signed by a parent or guardian.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can students join multiple clubs?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! Students are encouraged to explore multiple interests. However, we recommend limiting participation to 2-3 clubs to ensure they can commit fully to each activity while maintaining academic balance.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is there a fee to join clubs?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most clubs are free to join. Some activities like sports teams or specialized clubs may have minimal fees for uniforms, equipment, or competition entry. Financial assistance is available for families who need support.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What if my child needs to miss a club meeting?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Please notify the club advisor in advance if your child will be absent. Regular attendance is important for some clubs, especially competitive teams, but we understand that conflicts occasionally arise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../avoca-logo.png" alt="Avoca School District 37" class="footer-logo">
+          <div class="footer-contact">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>2921 Illinois Road<br>Wilmette, IL 60091</span>
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(847) 251-3587</span>
+            </p>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Parent Portal</a></li>
+            <li><a href="staff-directory.html">Staff Directory</a></li>
+            <li><a href="clubs.html">Clubs & Activities</a></li>
+            <li><a href="#">Board of Education</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Stay Connected</h3>
+          <p>Follow us on social media for the latest updates.</p>
+          <div class="social-icons">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Avoca School District 37. All rights reserved.</p>
+        <p>Committed to Excellence in Education</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

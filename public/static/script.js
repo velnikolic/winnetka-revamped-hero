@@ -145,17 +145,125 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   // FAQ Accordion
   // ============================================
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(function(item) {
-    const question = item.querySelector('.faq-question');
-    if (question) {
-      question.addEventListener('click', function() {
-        const wasOpen = item.classList.contains('open');
-        faqItems.forEach(function(i) { i.classList.remove('open'); });
-        if (!wasOpen) item.classList.add('open');
+  function initFaqAccordions() {
+    document.querySelectorAll('.faq-accordion, .faq-list').forEach(function(accordion) {
+      const items = accordion.querySelectorAll('.faq-item');
+      items.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+          question.addEventListener('click', function(e) {
+            e.preventDefault();
+            const wasOpen = item.classList.contains('open');
+            // Close all items in this accordion
+            items.forEach(function(i) { i.classList.remove('open'); });
+            // Open clicked item if it wasn't open
+            if (!wasOpen) item.classList.add('open');
+          });
+        }
       });
-    }
+    });
+  }
+  initFaqAccordions();
+
+  // ============================================
+  // Staff Directory Filter
+  // ============================================
+  const staffSearchInput = document.getElementById('staff-search-input');
+  const staffCards = document.querySelectorAll('.staff-card');
+  const staffCategories = document.querySelectorAll('.staff-category');
+  const staffFilterBtns = document.querySelectorAll('.staff-filter-btns .filter-btn');
+
+  if (staffSearchInput) {
+    staffSearchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      staffCards.forEach(function(card) {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const title = card.querySelector('.staff-title').textContent.toLowerCase();
+        const department = card.querySelector('.staff-department').textContent.toLowerCase();
+        if (name.includes(searchTerm) || title.includes(searchTerm) || department.includes(searchTerm)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  if (staffFilterBtns.length > 0) {
+    staffFilterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        staffFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        
+        staffCategories.forEach(function(category) {
+          if (filter === 'all' || category.dataset.category === filter) {
+            category.style.display = 'block';
+          } else {
+            category.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // ============================================
+  // Clubs Filter
+  // ============================================
+  const clubsFilterBtns = document.querySelectorAll('.clubs-filter .filter-btn');
+  const clubCards = document.querySelectorAll('.club-card');
+
+  if (clubsFilterBtns.length > 0) {
+    clubsFilterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        clubsFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        
+        clubCards.forEach(function(card) {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // ============================================
+  // Sidemenu Group Toggle
+  // ============================================
+  const sidemenuGroupToggles = document.querySelectorAll('.sidemenu-group-toggle');
+  sidemenuGroupToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      const group = this.dataset.group;
+      const links = document.getElementById(group);
+      const wasActive = this.classList.contains('active');
+      
+      // Close all groups
+      sidemenuGroupToggles.forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.sidemenu-links').forEach(function(l) { l.classList.remove('active'); });
+      
+      // Open clicked group if it wasn't open
+      if (!wasActive && links) {
+        this.classList.add('active');
+        links.classList.add('active');
+      }
+    });
   });
+
+  // ============================================
+  // Sidemenu Toggle (Collapse/Expand)
+  // ============================================
+  const sidemenuToggle = document.getElementById('sidemenu-toggle');
+  const sidemenu = document.getElementById('sidemenu');
+  
+  if (sidemenuToggle && sidemenu) {
+    sidemenuToggle.addEventListener('click', function() {
+      sidemenu.classList.toggle('collapsed');
+    });
+  }
 
   // ============================================
   // Content Sliders
