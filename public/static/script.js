@@ -24,21 +24,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.getElementById('close-btn');
   const menuOverlay = document.getElementById('menu-overlay');
 
-  menuBtn.addEventListener('click', function() {
+  function openMenu() {
     menuOverlay.classList.add('open');
+    menuBtn.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
-  });
+  }
 
-  closeBtn.addEventListener('click', function() {
+  function closeMenu() {
     menuOverlay.classList.remove('open');
+    menuBtn.classList.remove('menu-open');
     document.body.style.overflow = '';
-  });
+  }
+
+  if (menuBtn && menuOverlay) {
+    menuBtn.addEventListener('click', function() {
+      if (menuOverlay.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      closeMenu();
+    });
+  }
 
   // Close menu on escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && menuOverlay.classList.contains('open')) {
-      menuOverlay.classList.remove('open');
-      document.body.style.overflow = '';
+    if (e.key === 'Escape' && menuOverlay && menuOverlay.classList.contains('open')) {
+      closeMenu();
     }
   });
 
