@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Staff Directory - Meet the dedicated faculty and staff of Avoca School District 37 in Wilmette, Illinois.">
+  <title>Staff Directory | Avoca School District 37</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header header-inner" id="header">
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="../avoca-logo.png" alt="Avoca School District 37" class="logo-img">
+      </a>
+      <span class="header-title" id="header-title">Avoca School District 37</span>
+    </div>
+    <button class="menu-btn" id="menu-btn">
+      <span>MENU</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Secondary Navigation -->
+  <nav class="secondary-nav">
+    <div class="container">
+      <ul class="secondary-nav-list">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="staff-directory.html" class="active">Staff Directory</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <div class="menu-header">
+      <div class="menu-logo-wrap">
+        <img src="../avoca-logo.png" alt="Avoca School District 37" class="menu-logo">
+        <div>
+          <h2>Avoca School District 37</h2>
+          <p>Wilmette, Illinois</p>
+        </div>
+      </div>
+      <button class="close-btn" id="close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu-search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.3-4.3"></path>
+      </svg>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="menu-quick-links">
+      <a href="#">Parent Portal</a>
+      <a href="staff-directory.html">Staff Directory</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="menu-sections">
+      <div class="menu-section">
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">Our District</a></li>
+          <li><a href="about.html#mission">Mission & Vision</a></li>
+          <li><a href="about.html#leadership">Leadership</a></li>
+          <li><a href="about.html#board">Board of Education</a></li>
+          <li><a href="#">Employment</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Schools</h3>
+        <ul>
+          <li><a href="#">Avoca West</a></li>
+          <li><a href="#">Marie Murphy</a></li>
+          <li><a href="#">District Office</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="#">Curriculum</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Special Education</a></li>
+          <li><a href="#">Gifted & Talented</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Parents & Students</h3>
+        <ul>
+          <li><a href="#">Parent Portal</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="#">Lunch Menu</a></li>
+          <li><a href="#">Transportation</a></li>
+          <li><a href="#">Health Services</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="news.html">News & Events</a></li>
+          <li><a href="#">PTO</a></li>
+          <li><a href="#">Foundation</a></li>
+          <li><a href="#">Volunteer</a></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="staff-directory.html">Staff Directory</a></li>
+          <li><a href="clubs.html">Clubs & Activities</a></li>
+          <li><a href="sidemenu-template.html">Side Menu Template</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&h=600&fit=crop');"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Staff Directory</span>
+        </nav>
+        <h1>Staff <span class="italic">Directory</span></h1>
+      </div>
+    </section>
+
+    <!-- Staff Directory Content -->
+    <section class="staff-directory-section">
+      <div class="container">
+        <!-- Search and Filter -->
+        <div class="staff-filters">
+          <div class="staff-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <input type="text" id="staff-search-input" placeholder="Search by name or department...">
+          </div>
+          <div class="staff-filter-btns">
+            <button class="filter-btn active" data-filter="all">All Staff</button>
+            <button class="filter-btn" data-filter="administration">Administration</button>
+            <button class="filter-btn" data-filter="avoca-west">Avoca West</button>
+            <button class="filter-btn" data-filter="marie-murphy">Marie Murphy</button>
+            <button class="filter-btn" data-filter="support">Support Staff</button>
+          </div>
+        </div>
+
+        <!-- Administration Section -->
+        <div class="staff-category" data-category="administration">
+          <h2>District Administration</h2>
+          <div class="staff-grid">
+            <div class="staff-card" data-department="administration">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" alt="Dr. James Wilson">
+              </div>
+              <div class="staff-info">
+                <h3>Dr. James Wilson</h3>
+                <p class="staff-title">Superintendent</p>
+                <p class="staff-department">District Office</p>
+                <div class="staff-contact">
+                  <a href="mailto:jwilson@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    jwilson@avoca37.org
+                  </a>
+                  <a href="tel:8472513587">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (847) 251-3587
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="administration">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop" alt="Dr. Sarah Chen">
+              </div>
+              <div class="staff-info">
+                <h3>Dr. Sarah Chen</h3>
+                <p class="staff-title">Assistant Superintendent</p>
+                <p class="staff-department">Curriculum & Instruction</p>
+                <div class="staff-contact">
+                  <a href="mailto:schen@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    schen@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="administration">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop" alt="Mr. Robert Adams">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. Robert Adams</h3>
+                <p class="staff-title">Director of Business Services</p>
+                <p class="staff-department">Finance & Operations</p>
+                <div class="staff-contact">
+                  <a href="mailto:radams@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    radams@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avoca West Section -->
+        <div class="staff-category" data-category="avoca-west">
+          <h2>Avoca West Elementary</h2>
+          <div class="staff-grid">
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="Mr. Michael Torres">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. Michael Torres</h3>
+                <p class="staff-title">Principal</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:mtorres@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    mtorres@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Ms. Jennifer Lee">
+              </div>
+              <div class="staff-info">
+                <h3>Ms. Jennifer Lee</h3>
+                <p class="staff-title">1st Grade Teacher</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:jlee@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    jlee@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop" alt="Mrs. Amanda White">
+              </div>
+              <div class="staff-info">
+                <h3>Mrs. Amanda White</h3>
+                <p class="staff-title">2nd Grade Teacher</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:awhite@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    awhite@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="Mr. David Kim">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. David Kim</h3>
+                <p class="staff-title">3rd Grade Teacher</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:dkim@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    dkim@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop" alt="Ms. Rachel Green">
+              </div>
+              <div class="staff-info">
+                <h3>Ms. Rachel Green</h3>
+                <p class="staff-title">Art Teacher</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:rgreen@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    rgreen@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="avoca-west">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop" alt="Mr. James Martinez">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. James Martinez</h3>
+                <p class="staff-title">Physical Education Teacher</p>
+                <p class="staff-department">Avoca West</p>
+                <div class="staff-contact">
+                  <a href="mailto:jmartinez@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    jmartinez@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marie Murphy Section -->
+        <div class="staff-category" data-category="marie-murphy">
+          <h2>Marie Murphy Middle School</h2>
+          <div class="staff-grid">
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop" alt="Mrs. Emily Davis">
+              </div>
+              <div class="staff-info">
+                <h3>Mrs. Emily Davis</h3>
+                <p class="staff-title">Principal</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:edavis@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    edavis@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop" alt="Mr. Thomas Anderson">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. Thomas Anderson</h3>
+                <p class="staff-title">Math Teacher</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:tanderson@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    tanderson@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop" alt="Ms. Olivia Brown">
+              </div>
+              <div class="staff-info">
+                <h3>Ms. Olivia Brown</h3>
+                <p class="staff-title">English/Language Arts Teacher</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:obrown@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    obrown@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop" alt="Mr. William Park">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. William Park</h3>
+                <p class="staff-title">Science Teacher</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:wpark@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    wpark@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop" alt="Mrs. Susan Miller">
+              </div>
+              <div class="staff-info">
+                <h3>Mrs. Susan Miller</h3>
+                <p class="staff-title">Social Studies Teacher</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:smiller@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    smiller@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="marie-murphy">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&h=300&fit=crop" alt="Ms. Linda Taylor">
+              </div>
+              <div class="staff-info">
+                <h3>Ms. Linda Taylor</h3>
+                <p class="staff-title">Music Teacher</p>
+                <p class="staff-department">Marie Murphy</p>
+                <div class="staff-contact">
+                  <a href="mailto:ltaylor@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    ltaylor@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Staff Section -->
+        <div class="staff-category" data-category="support">
+          <h2>Support Staff</h2>
+          <div class="staff-grid">
+            <div class="staff-card" data-department="support">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300&h=300&fit=crop" alt="Mrs. Patricia Gomez">
+              </div>
+              <div class="staff-info">
+                <h3>Mrs. Patricia Gomez</h3>
+                <p class="staff-title">School Nurse</p>
+                <p class="staff-department">Health Services</p>
+                <div class="staff-contact">
+                  <a href="mailto:pgomez@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    pgomez@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="support">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" alt="Mr. Richard Hall">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. Richard Hall</h3>
+                <p class="staff-title">School Counselor</p>
+                <p class="staff-department">Student Services</p>
+                <div class="staff-contact">
+                  <a href="mailto:rhall@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    rhall@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="support">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&h=300&fit=crop" alt="Mr. Mark Stevens">
+              </div>
+              <div class="staff-info">
+                <h3>Mr. Mark Stevens</h3>
+                <p class="staff-title">Technology Coordinator</p>
+                <p class="staff-department">IT Department</p>
+                <div class="staff-contact">
+                  <a href="mailto:mstevens@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    mstevens@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-card" data-department="support">
+              <div class="staff-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop" alt="Mrs. Nancy Clark">
+              </div>
+              <div class="staff-info">
+                <h3>Mrs. Nancy Clark</h3>
+                <p class="staff-title">Administrative Assistant</p>
+                <p class="staff-department">District Office</p>
+                <div class="staff-contact">
+                  <a href="mailto:nclark@avoca37.org">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    nclark@avoca37.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../avoca-logo.png" alt="Avoca School District 37" class="footer-logo">
+          <div class="footer-contact">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>2921 Illinois Road<br>Wilmette, IL 60091</span>
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(847) 251-3587</span>
+            </p>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Parent Portal</a></li>
+            <li><a href="staff-directory.html">Staff Directory</a></li>
+            <li><a href="#">Employment</a></li>
+            <li><a href="#">Board of Education</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Stay Connected</h3>
+          <p>Follow us on social media for the latest updates.</p>
+          <div class="social-icons">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Avoca School District 37. All rights reserved.</p>
+        <p>Committed to Excellence in Education</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
