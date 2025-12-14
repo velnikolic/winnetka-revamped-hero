@@ -23,16 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuBtn = document.getElementById('menu-btn');
   const closeBtn = document.getElementById('close-btn');
   const menuOverlay = document.getElementById('menu-overlay');
+  const header = document.getElementById('header');
 
   function openMenu() {
     menuOverlay.classList.add('open');
     menuBtn.classList.add('menu-open');
+    if (header) header.classList.add('menu-active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menuOverlay.classList.remove('open');
     menuBtn.classList.remove('menu-open');
+    if (header) header.classList.remove('menu-active');
     document.body.style.overflow = '';
   }
 
