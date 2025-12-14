@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   // Header Scroll Behavior
   // ============================================
-  const header = document.getElementById('header');
+  const headerEl = document.getElementById('header');
   
   window.addEventListener('scroll', function() {
     if (window.scrollY > 100) {
-      header.classList.add('scrolled');
+      if (headerEl) headerEl.classList.add('scrolled');
     } else {
-      header.classList.remove('scrolled');
+      if (headerEl) headerEl.classList.remove('scrolled');
     }
   });
 
@@ -23,19 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuBtn = document.getElementById('menu-btn');
   const closeBtn = document.getElementById('close-btn');
   const menuOverlay = document.getElementById('menu-overlay');
-  const header = document.getElementById('header');
 
   function openMenu() {
+    if (!menuOverlay || !menuBtn) return;
     menuOverlay.classList.add('open');
     menuBtn.classList.add('menu-open');
-    if (header) header.classList.add('menu-active');
+    if (headerEl) headerEl.classList.add('menu-active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
+    if (!menuOverlay || !menuBtn) return;
     menuOverlay.classList.remove('open');
     menuBtn.classList.remove('menu-open');
-    if (header) header.classList.remove('menu-active');
+    if (headerEl) headerEl.classList.remove('menu-active');
     document.body.style.overflow = '';
   }
 
